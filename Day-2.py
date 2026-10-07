@@ -46,7 +46,7 @@ c=a     #reassing the exisiting value to a new variable
 print(c)
 """
 #litterals--> these are constants such as numbers(int,float,complex)
-age=35.5
+'''age=35.5
 print(age)
 taste ="bad"
 print(taste)
@@ -71,4 +71,15 @@ print(a%b)# Modulus --> returns remainder
 price=1000
 discount=0.15
 final_price =price-(price*discount)
+print(final_price)'''
+
+#Vijay went to hotel for dinner his bill is 2500,Gst applicable is 5%
+#hotel manager has given him 5% discount,how much vijay has to pay?
+bill=2500
+dis=5/100
+gst=5/100
+final_price=bill-(bill*dis)
 print(final_price)
+final_price=final_price+(final_price*gst)
+print(final_price)
+         
