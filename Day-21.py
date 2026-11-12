@@ -1,4 +1,4 @@
-#fname(args) #actual arguments
+#  fname(args) #actual arguments
 '''
 Positional aruguments ---> Count of arguments to be matched
 Default arguments --->we can make arguments as default
@@ -7,7 +7,7 @@ Variable length arguments (*args) --> we can pass any number of postional
 keyword variable lengths arguments (**KWARGS) --> we can pass any number of keyword arguments
 '''
 
-#POSITIONAL ARGUMENTS :---->Count of arguments to be matched
+# POSITIONAL ARGUMENTS :---->Count of arguments to be matched
 '''
 def data(a,b,c):
     """Function to perform Arthematic Operations"""
