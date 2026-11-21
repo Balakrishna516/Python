@@ -153,11 +153,120 @@ except ExceptionType: #it handles the error if it occurs
 '''
 
 #Basic Exception Handling
+'''
 a,b=5,3
 try:
     result =a/b
     print(result)
 except Exception as e:
     print(e)
+'''
+#a,b = map(int,input("Enter the values:").split())
+#print(a,b)
+'''
+try:
+    a,b = map(int,input("Enter the values:").split())
+    print(a,b)
+    result = a/b
+    print(f'Answer is {result}')
+except Exception as e:
+    print(f'Error is {e}')
+'''
+#OUTPUT:
+'''
+    Enter the values:45 13
+45 13
+Answer is 3.4615384615384617
+'''
+#Multiple except Blocks
+'''
+try:
+    a,b = map(int,input("enter the values:").split())
+    #print(a,b)
+    result = a/b
+    print(f"answer is {result}")
+except ValueError:
+    print("values should not be only 2 and only integers")
+except ZeroDivisionError:
+    print("cannot be divide by")
+except NameError:
+    print("improper")
+'''
+#OUTPUT:
+'''
+enter the values:345 1444 
+answer is 0.2389196675900277
+'''
+'''
+try:
+    subjects=["python",45,"AI",30]
+    #print(subjects[5])
+    subjects.append("sql")
+    print(subjects)
+except Exception as e: #this can be written if u want exception to take care
+    print(e)
+except IndexError:
+    print("make sure to check the length of the list")
+except NameError:
+    print("checking spelling")
+except AttributeError:
+    print("Check the method properly")
+finally:
+    print("anyway this was be printed")
+'''
+#output:
+'''
+['python', 45, 'AI', 30, 'sql']
+anyway this was be printed
+'''
+#Catching Multiple Exceptions Together
+'''
+try:
+    value=int(input("enter the value:"))
+    #result = 10/value check this case
+    f=10/value
+    print(f)
+except (ValueError ,ZeroDivisionError,NameError) as e:
+    print(f"An error Occured:{e}")
+'''   
+#output:
+'''
+enter the value:12
+0.8333333333333334
+'''
+#RAISING EXCEPTIONS
+#YOU can raise exceptions intentionally using raise Keyword
+'''
+value=15
+if value <0:
+    raise ValueError("value can not be negativea")
+#else:
+#      print("done")
 
-
+Custom Error Messages:
+try:
+    raise Exception("custom Error Message")
+except Exception as e:
+    print(e)
+'''
+'''
+try:
+    value=-15
+    if value <0 or value in[1,20]:
+        raise Exception ("value cannot be  negative")
+except Exception as e:
+    print(e)
+'''
+'''
+def fn(a,b):
+    """testing"""
+    return a*b
+print(fn(50,20))
+'''
+#OUTPUT:
+'''
+1000
+'''
+    
+    
+    
